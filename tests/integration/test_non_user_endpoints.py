@@ -1,7 +1,4 @@
 # -*- coding: utf-8 -*-
-import sys
-sys.path.append(path)
-
 from spotipy import (
     Spotify,
     SpotifyClientCredentials,
