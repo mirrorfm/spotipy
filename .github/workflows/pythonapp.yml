@@ -9,6 +9,11 @@ jobs:
     strategy:
       matrix:
         python-version: [2.7, 3.5, 3.6, 3.7, 3.8]
+    env:
+      SPOTIFY_CLIENT_ID: ${{secrets.SPOTIFY_CLIENT_ID}}
+      SPOTIFY_CLIENT_SECRET: ${{secrets.SPOTIFY_CLIENT_SECRET}}
+      SPOTIFY_REDIRECT_URI: ${{secrets.SPOTIFY_REDIRECT_URI}}
+      SPOTIFY_USER_REFRESH: ${{secrets.SPOTIFY_USER_REFRESH}}
 
     steps:
     - uses: actions/checkout@v2
