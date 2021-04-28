@@ -9,7 +9,7 @@ jobs:
     timeout-minutes: 5
     strategy:
       matrix:
-        python-version: [3.5, 3.6, 3.7, 3.8]
+        python-version: [2.7, 3.5, 3.6, 3.7, 3.8]
     env:
       SPOTIPY_CLIENT_ID: ${{secrets.SPOTIPY_CLIENT_ID}}
       SPOTIPY_CLIENT_SECRET: ${{secrets.SPOTIPY_CLIENT_SECRET}}
@@ -34,4 +34,3 @@ jobs:
     - name: Run unit tests
       run: |
         python -m unittest discover -v tests/unit
-        python -m unittest -v tests/integration/test_non_user_endpoints.py
